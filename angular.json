@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gastrodom"
+    }
+  },
+  "defaultProject": "gastrodom",
+  "cli": {
+    "analytics": "6615997c-2af0-4aa0-b370-387f0406e0cd"
+  }
 }

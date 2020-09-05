@@ -1,0 +1,38 @@
+<form class="form-inline my-2 my-lg-0" (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="magic-search" [ngClass]="{'bg-white': f.valid}">
+    <div class="row">
+      <div class="col-md-12 magic-search__bar">
+        <span *ngIf="f.valid">
+          <a href="#" (click)="onCancel()"><i class="icofont icofont-arrow-left icofont-2x"></i></a>
+        </span>
+        <div class="form d-flex">
+          <input [ngClass]="{'bg-grey': f.valid}" ngModel name="searchText" class="form-control
+             mr-sm-2" type="text" placeholder="buscar .." required>
+          <button [disabled]="!f.valid" class="btn btn-link my-2 my-sm-0" type="submit">Buscar</button>
+        </div>
+      </div>
+      <div class="col-md-12 mt-3 magic-search__result overflow-auto animate__animated animate__bounce" id="scrollbar" *ngIf="f.valid"> <!-- *ngIf="f.valid" -->
+        <div class="title">
+          <h4>Busquedas recientes</h4>
+          <a href="#">Editar</a>
+        </div>
+        <ul class="list-group">
+          <li *ngFor="let recent of recentSearch" class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="#" class="list-group-item list-group-item-action">
+
+              <div class="row">
+                <div class="col-2 col-md-2 d-flex justify-content-center"><img class="img img-rounded" [src]="'./assets/images/faces/'+recent.image" alt="user img"></div>
+                <div class="col-8 col-md-8 ml-0 d-flex align-self-center">{{recent.message}}</div>
+                <div class="col-2 col-md-2 d-flex justify-content-center align-items-end flex-column no-grutters">
+                  <!-- <span class="badge badge-primary badge-pill">14</span> -->
+                  <button type="button" class="btn btn-link"><i class="icofont icofont-close-line"></i></button>
+                </div>
+              </div>
+
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</form>
