@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { SearchService } from './search.service';
 
 import { Recent } from '../../../interfaces/all.interface';
+
 
 @Component({
 	selector: 'app-search',
@@ -14,9 +15,10 @@ import { Recent } from '../../../interfaces/all.interface';
 export class SearchComponent implements OnInit {
 
 	@ViewChild('f') searchForm: NgForm;
+
 	recentSearch: Recent[];
 
-	constructor(private _searchService: SearchService) { }
+	constructor(private _searchService: SearchService) {}
 
 	onSubmit() {
 		console.log(this.searchForm);

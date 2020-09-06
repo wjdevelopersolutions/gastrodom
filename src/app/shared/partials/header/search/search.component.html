@@ -1,6 +1,7 @@
 <form class="form-inline my-2 my-lg-0" (ngSubmit)="onSubmit()" #f="ngForm">
-  <div class="magic-search" [ngClass]="{'bg-white': f.valid}">
-    <div class="row">
+  <div class="magic-search" [ngClass]="{'bg-white shadow': f.valid}">
+    <div class="row no-grutters">
+
       <div class="col-md-12 magic-search__bar">
         <span *ngIf="f.valid">
           <a href="#" (click)="onCancel()"><i class="icofont icofont-arrow-left icofont-2x"></i></a>
@@ -11,7 +12,7 @@
           <button [disabled]="!f.valid" class="btn btn-link my-2 my-sm-0" type="submit">Buscar</button>
         </div>
       </div>
-      <div class="col-md-12 mt-3 magic-search__result overflow-auto animate__animated animate__bounce" id="scrollbar" *ngIf="f.valid"> <!-- *ngIf="f.valid" -->
+      <div class="col-md-12 mt-3 magic-search__result overflow-auto" [ngClass]=" f.valid ? 'animate__animated animate__fadeIn' : '' "> <!-- *ngIf="f.valid" -->
         <div class="title">
           <h4>Busquedas recientes</h4>
           <a href="#">Editar</a>
@@ -33,6 +34,7 @@
           </li>
         </ul>
       </div>
+
     </div>
   </div>
 </form>

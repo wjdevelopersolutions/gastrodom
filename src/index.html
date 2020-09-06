@@ -8,10 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <link rel="stylesheet" href="./assets/css/bootstrap-cosmo.css">
-  <link rel="stylesheet" href="./assets/css/jquery.magicsearch.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-
   <link rel="stylesheet" href="./assets/css/icofont.min.css">
 
 </head>
@@ -21,31 +18,6 @@
   <script src="./assets/js/jquery-2.2.3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="./assets/js/jquery.magicsearch.js" charset="utf-8"></script>
-
-  <script>
-      $(function() {
-          var dataSource = [
-              {id: 1, firstName: 'Tim', lastName: 'Cook'},
-              {id: 2, firstName: 'Eric', lastName: 'Baker'},
-              {id: 3, firstName: 'Victor', lastName: 'Brown'},
-              {id: 4, firstName: 'Lisa', lastName: 'White'},
-              {id: 5, firstName: 'Oliver', lastName: 'Bull'},
-              {id: 6, firstName: 'Zade', lastName: 'Stock'},
-              {id: 7, firstName: 'David', lastName: 'Reed'},
-              {id: 8, firstName: 'George', lastName: 'Hand'},
-              {id: 9, firstName: 'Tony', lastName: 'Well'},
-              {id: 10, firstName: 'Bruce', lastName: 'Wayne'},
-          ];
-          $('#basic').magicsearch({
-              dataSource: dataSource,
-              fields: ['firstName', 'lastName'],
-              id: 'id',
-              format: '%firstName% · %lastName%',
-              focusShow: true
-          });
-      });
-  </script>
 
 </body>
 </html>
